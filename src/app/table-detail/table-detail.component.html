@@ -1,0 +1,46 @@
+<div *ngIf='!table'>Loading</div>
+<div *ngIf='table'> 
+  <div class="container-fluid">      
+<nav class="navbar  bg-primary">
+    <div class="navbar-header navbar-expand-lg">
+      <a class="navbar-brand" routerLink='' routerLinkActive="active">&larr; Data Peace</a>
+    </div>
+    </nav> 
+</div>
+<div class="container">
+  <h2>{{table.first_name}}</h2><br><br>
+  <table class="table">
+    <thead>
+      <tr>
+        <td><b>Company</b></td>
+        <td align='right'>{{table.company_name}}</td>
+      </tr>
+      <tr>
+        <td><b>City</b></td>
+        <td align='right'>{{table.city}}</td>
+      </tr>
+      <tr>
+        <td><b>State</b></td>
+        <td align='right'>{{table.state}}</td>
+      </tr>
+      <tr>
+        <td><b>Zip</b></td>
+       <td align='right'>{{table.zip}}</td>
+      </tr>
+      <tr>
+        <td><b>Email</b></td>
+        <td align='right'>{{table.email}}</td>
+      </tr>
+      <tr>
+        <td><b>Web</b></td>
+        <td align='right'>{{table.web}}</td>
+      </tr>
+      <tr>
+        <td><b>Age</b></td>
+        <td align='right'>{{table.age}}</td>
+      </tr>
+    </thead>
+  </table>
+</div>
+</div>
+

@@ -1,0 +1,36 @@
+ table {
+      width: 100%;
+      margin-bottom: 20rem;
+    }
+
+    table,
+    th,
+    td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      padding: 15px;
+      text-align: left;
+    }
+    td{
+      color:black;
+    }
+     tr:nth-child(odd) {
+      background: rgb(199, 190, 190);
+    }
+    tr{
+      cursor: pointer;
+    }
+
+     #t01 th {
+      background-color: skyblue;
+      color: white;
+    }
+    pagination-controls{
+      text-align: center;
+      font-size: 22px;    
+    }
+    

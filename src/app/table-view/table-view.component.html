@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <div class="container-fluid">
+    <nav class="navbar  bg-primary">
+      <form #searchForm='ngForm' class="navbar-form navbar-left">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search by first name" name="s" [(ngModel)]='filter' />
+        </div>
+      </form>
+    </nav>
+  </div>
+<div class='container'>
+  <div class='row'>
+<body>
+  <table class="table table-hover table-responsive" id="t01" matSort (matSortChange)="sortData($event)">
+    <tr>
+      <th>Index</th>
+      <th mat-sort-header='first_name'>First Name</th>
+      <th mat-sort-header='last_name'>Last Name</th>
+      <th mat-sort-header='company_name'>Company Name</th>
+      <th mat-sort-header='city'>City</th>
+      <th mat-sort-header='state'>State</th>
+      <th mat-sort-header='zip'>Zip</th>
+      <th mat-sort-header='email'>Email</th>
+      <th mat-sort-header='web'>Web</th>
+      <th mat-sort-header='age'>Age</th>
+    </tr>
+    <tbody *ngFor='let abc of sortedData | search:filter | paginate: { itemsPerPage: 5, currentPage: p } ; let i= index'>
+      <tr [routerLink]="['/users', abc.id]"> 
+      <td>{{i+1}}</td>
+      <td>{{abc.first_name}}</td>
+      <td>{{abc.last_name}}</td>
+      <td>{{abc.company_name}}</td>
+      <td>{{abc.city}}</td>
+      <td>{{abc.state}}</td>
+      <td>{{abc.zip}}</td>
+      <td>{{abc.email}}</td>
+      <td>{{abc.web}}</td>
+      <td>{{abc.age}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+
+</body>
+</div>
+
+</div>
+</html>
