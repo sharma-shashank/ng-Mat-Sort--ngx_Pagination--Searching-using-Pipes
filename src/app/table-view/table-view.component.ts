@@ -14,10 +14,10 @@ import { TableDetailComponent } from '../table-detail/table-detail.component';
 })
 export class TableViewComponent implements OnInit{
   private req: any;
-  tableList: any;
-  sortedData;
-arr = [];
-  p = 1;
+  tableList: Array<any> = [];
+  sortedData: any;
+  arr: Array<any> = [];
+  p: number = 1;
   constructor(private http: Http, private _table: TableService, private router: Router) {  }
   ngOnInit() {
     this.req = this._table.list().subscribe(data => {
